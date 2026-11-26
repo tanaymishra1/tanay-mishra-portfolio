@@ -22,37 +22,54 @@
 
 <header>
     <h1>Engineering Trade-Off Visualizer</h1>
-    <p>Interactive Web-Based Engineering Analysis Tool</p>
+    <p>HTML, CSS and JavaScript • v2.0</p>
 </header>
 
 <section>
-    <h2>Project Overview</h2>
+    <h2>What It Is</h2>
     <p>
-        The Engineering Trade-Off Visualizer is a web-based application designed
-        to model real-world engineering decision-making. Users can define design
-        parameters, allocate weighted priorities, and instantly visualize the
-        impact of those choices through live charts and evaluations.
+        A web version of my <a href="tradeoff.html">trade-off simulator</a>. You move
+        sliders for speed, torque and cost, split 100 points between them, and the
+        score and chart update as you go.
     </p>
 </section>
 
 <section>
-    <h2>Key Features</h2>
+    <h2>Why I Made It</h2>
+    <p>
+        The Python version makes you type everything in and only shows the result
+        at the end. I wanted to see the score change while I moved things around.
+    </p>
+</section>
+
+<section>
+    <h2>What It Does</h2>
     <ul>
-        <li>Real-time sliders for speed, torque, and cost</li>
-        <li>User-defined priority weighting (normalized to 100%)</li>
-        <li>Live bar graph visualization</li>
-        <li>Automated scoring and design evaluation</li>
-        <li>Design saving and ranking system</li>
+        <li>Sliders for speed, torque and cost</li>
+        <li>Priority points that have to add up to 100 (decimals like 33.4 work)</li>
+        <li>A score out of 100 that matches the Python version</li>
+        <li>A chart of how much each factor adds to or takes away from the total</li>
+        <li>Saving designs and ranking them by score</li>
     </ul>
 </section>
 
 <section>
-    <h2>Technologies Used</h2>
-    <ul>
-        <li>HTML & CSS</li>
-        <li>JavaScript (DOM manipulation, canvas visualization)</li>
-        <li>GitHub Pages for deployment</li>
-    </ul>
+    <h2>What Changed in v2.0</h2>
+    <p>
+        The scoring now matches the Python version, so the same design gets the
+        same score in both. The chart used to just repeat the slider values, and
+        now it shows why a design scored the way it did. I also fixed a bug where
+        33.4 + 33.3 + 33.3 got rejected, since JavaScript adds it up to
+        99.99999999999999, and made the chart fit on phones.
+    </p>
+</section>
+
+<section>
+    <h2>Built With</h2>
+    <p>
+        Plain HTML, CSS and JavaScript, with the chart drawn on a canvas. It's
+        hosted on GitHub Pages.
+    </p>
 </section>
 
 <section>

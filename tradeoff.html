@@ -22,58 +22,58 @@
 
     <header>
         <h1>Engineering Trade-Off Simulator</h1>
-        <p>Python • Object-Oriented Programming • Engineering Analysis</p>
+        <p>Python • v2.0</p>
     </header>
 
     <section>
-        <h2>Project Overview</h2>
+        <h2>What It Is</h2>
         <p>
-            The Engineering Trade-Off Simulator is a Python-based tool inspired by
-            FIRST Robotics Competition (FRC) design decisions. It evaluates multiple
-            mechanical design options using weighted performance metrics such as
-            speed, torque, and cost.
+            A Python program I wrote that compares design options. You rate each
+            design's speed, torque and cost from 1 to 10, decide how much each one
+            matters, and it ranks them with a score out of 100.
         </p>
     </section>
 
     <section>
-        <h2>Problem Motivation</h2>
+        <h2>Why I Made It</h2>
         <p>
-            In robotics and engineering design, improving one variable often comes
-            at the expense of another. This project was created to model those
-            trade-offs programmatically and to practice object-oriented programming
-            while applying real engineering constraints.
+            I got the idea from FRC robotics, where making one thing better usually
+            makes something else worse. A faster drivetrain has less torque, and
+            better parts cost more. I wanted a simple way to compare options like
+            that, and I also wanted practice writing classes in Python.
         </p>
     </section>
 
     <section>
         <h2>How It Works</h2>
         <ul>
-            <li>User inputs ratings for speed, torque, and cost (1–10 scale)</li>
-            <li>Each design is represented as a <code>Design</code> object</li>
-            <li>Weighted scoring evaluates overall performance</li>
-            <li>Constraints (minimum torque) affect evaluation outcomes</li>
-            <li>Designs are ranked and analyzed comparatively</li>
+            <li>You give speed, torque and cost a weight, and they get scaled to add up to 1</li>
+            <li>Each design is a <code>Design</code> object that works out its own score</li>
+            <li>Speed and torque add to the score and cost takes away from it</li>
+            <li>Torque under 5 costs a point and fails the torque check</li>
+            <li>The score goes from 0, the worst design possible with your weights, to 100, the best</li>
+            <li>Designs are ranked, and each one gets an evaluation and a design focus</li>
         </ul>
     </section>
 
     <section>
-        <h2>Technical Concepts Used</h2>
-        <ul>
-            <li>Object-Oriented Programming (classes, methods, attributes)</li>
-            <li>User input validation</li>
-            <li>Algorithmic scoring & ranking</li>
-            <li>Engineering trade-off analysis</li>
-        </ul>
+        <h2>What Changed in v2.0</h2>
+        <p>
+            The first version used a cutoff of 6 for "well-balanced", but with equal
+            weights the best possible score was about 6.3, so almost nothing reached
+            it. Version 2 scores out of 100 instead. I also moved the weights out of
+            global variables, fixed the place names (it used to print "21th"), and
+            added tests that GitHub runs every time I push.
+        </p>
     </section>
 
     <section>
-        <h2>Future Improvements</h2>
-        <ul>
-            <li>Customizable weighting profiles for different design goals</li>
-            <li>Graphical output of trade-off comparisons (done in the <a href="tradeoff-visualizer.html">Trade-Off Visualizer</a>)</li>
-            <li>Web-based interface version (done in the <a href="tradeoff-visualizer.html">Trade-Off Visualizer</a>)</li>
-
-        </ul>
+        <h2>What's Next</h2>
+        <p>
+            I'd like to add saved weight presets for different goals. The
+            <a href="tradeoff-visualizer.html">Trade-Off Visualizer</a> is the web
+            version, with sliders and a chart.
+        </p>
     </section>
 
     <section>
